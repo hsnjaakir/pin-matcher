@@ -23,6 +23,11 @@ function button (id) {
     const initialInput = document.getElementById("getPin").value;
     const getPin = document.getElementById(id).innerText; 
     document.getElementById("getPin").value = initialInput + getPin;
+    const input = document.getElementById("getPin").value;
+    let length = Math.log10(input);
+    if (length > 6) {
+        document.getElementById('getPin').value = "Input too long."
+    }
 })
 }
 
