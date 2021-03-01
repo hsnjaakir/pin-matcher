@@ -26,6 +26,17 @@ function button (id) {
 })
 }
 
+const clear = document.getElementById('clear');
+clear.addEventListener('click', function(){
+    document.getElementById('getPin').value = '';
+})
+
+// const clearOneByOne = document.getElementById('delete');
+// clearOneByOne.addEventListener('click', function(){
+//     const getPin = document.getElementById('getPin').value;
+//     getPin.pop();
+// })
+
 button("zero");
 button("one");
 button("two");
