@@ -31,11 +31,19 @@ clear.addEventListener('click', function(){
     document.getElementById('getPin').value = '';
 })
 
-// const clearOneByOne = document.getElementById('delete');
-// clearOneByOne.addEventListener('click', function(){
-//     const getPin = document.getElementById('getPin').value;
-//     getPin.pop();
-// })
+const clearOneByOne = document.getElementById('delete');
+clearOneByOne.addEventListener('click', function(){
+    const getPin = document.getElementById('getPin').value;
+    const quotient = getPin/10;
+    const result = Math.floor(quotient);
+    if (result == 0) {
+        document.getElementById('getPin').value = '';
+    }
+    else{
+        document.getElementById('getPin').value = result;
+    }
+
+})
 
 button("zero");
 button("one");
