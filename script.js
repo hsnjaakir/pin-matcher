@@ -27,7 +27,9 @@ function button (id) {
     let length = Math.log10(input);
     if (length > 6) {
         document.getElementById('getPin').value = "Input too long."
+        setTimeout(() => {  document.getElementById('getPin').value = ''; }, 500);
     }
+    
 })
 }
 
@@ -65,5 +67,16 @@ const submit = document.getElementById('submit');
 submit.addEventListener('click', function(){
     if (randomValue == document.getElementById("getPin").value) {
         notifySection.style.display = "block";
+    }
+    else{
+        document.getElementById('getPin').value = 'Not matched';
+        setTimeout(() => {  document.getElementById('getPin').value = ''; }, 500);
+        let count = 0;
+        count++;
+        let y = document.getElementById('try').innerText - count;
+        document.getElementById('try').innerText = y;
+        if (y == 0) {
+            setTimeout(() => { document.getElementById('getPin').value = 'Try later';  }, 500);
+        }
     }
 })
