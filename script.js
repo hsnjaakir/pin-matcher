@@ -56,8 +56,8 @@ button("seven");
 button("eight");
 button("nine");
 
-const ifMatch = document.getElementById('ifMatch');
-ifMatch.addEventListener('click', function(){
+const submit = document.getElementById('submit');
+submit.addEventListener('click', function(){
     if (randomValue == document.getElementById("getPin").value) {
         notifySection.style.display = "block";
     }
